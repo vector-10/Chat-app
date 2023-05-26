@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 
 const Home = ({socket}) => {
     const navigate = useNavigate();
-    const [username, setUsername] = useState('')
+    const [username, setUsername] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ const Home = ({socket}) => {
     }
   return (
     <form className="home__container" onSubmit={handleSubmit}>
-    <h2 className="home__header">Sign in to Open Chat</h2>
+    <h2 className="home__header">Input a Username to Sign In</h2>
     <label htmlFor="username">Username</label>
     <input
       type="text"
