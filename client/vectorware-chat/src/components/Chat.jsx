@@ -9,26 +9,29 @@ const ChatPage = ({ socket }) => {
     const lastMessageRef = useRef(null);
 
     useEffect(() => {
-        socket.on('messageResponse', (data) => setMessages([...messages, data]));
-      }, [socket, messages]);
+      socket.on('messageResponse', (data) => setMessages([...messages, data]));
+      console.log(messages)
+    }, [socket, messages]);
 
-      useEffect(() => {
+    useEffect(() => {
         // scroll to bottom every time messages change
         lastMessageRef.current?.scrollIntoView({ behavior: 'smooth' });
-      }, [messages]);
+    }, [messages]);
 
-      useEffect(() => {
+    useEffect(() => {
         socket.on('typingResponse', (data) => setTypingStatus(data));
-      }, [socket]);
+    }, [socket]);
     
 
   return (
     <div className="chat">
     <ChatBar socket={socket} />
     <div className="chat__main">
-      <ChatBody messages={messages}
-       lastMessageRef={lastMessageRef} 
-       typingStatus={typingStatus} />
+      <ChatBody 
+      socket={socket}
+      messages={messages}
+      lastMessageRef={lastMessageRef} 
+      typingStatus={typingStatus} />
        
       <ChatFooter socket={socket} />
     </div>

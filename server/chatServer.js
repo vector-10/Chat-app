@@ -16,6 +16,7 @@ const socketIO = require('socket.io')(http, {
     }
 })
 
+//Array for all active user to be stored
 let users = [];
 
 socketIO.on('connection', (socket) => {
@@ -27,6 +28,11 @@ socketIO.on('connection', (socket) => {
     });
 
     //Listens and logs the message to the console
+  socket.on('message', (data) => {
+    console.log(data);
+  });
+
+    //sends message to all users on the server
   socket.on('message', (data) => {
     socketIO.emit('messageResponse', data)
   });
