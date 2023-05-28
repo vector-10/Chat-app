@@ -60,25 +60,10 @@ socketIO.on('connection', (socket) => {
     });
 });
 
-
-
+//To check if the server is running
 app.get('/', (req, res) => {
   res.json({message:"Server runtime Check"})
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const PORT = process.env.PORT || 4000
 
