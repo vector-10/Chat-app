@@ -13,8 +13,8 @@ const Home = ({socket}) => {
     }
   return (
     <form className="home__container" onSubmit={handleSubmit}>
-    <h2 className="home__header">Input a Username to Sign In</h2>
-    <label htmlFor="username">Username</label>
+    <h2 className="home__header">Vector-Chat </h2>
+    <label  htmlFor="username">Join spidermans chatroom</label>
     <input
       type="text"
       minLength={6}
