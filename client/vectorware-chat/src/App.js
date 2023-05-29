@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Chat from './components/Chat';
 import Home from './components/Home';
 
-const socket = socketIO.connect('https://chat-server-2ear.onrender.com/')
+const socket = socketIO.connect('https://new-chat-app-le5i.onrender.com')
 
 function App() {
   return (
