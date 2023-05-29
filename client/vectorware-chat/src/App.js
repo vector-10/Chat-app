@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Chat from './components/Chat';
 import Home from './components/Home';
 
-const socket = socketIO.connect('chat-app-ashy-iota.vercel.app')
+const socket = socketIO.connect('https://chat-app-vector-10.vercel.app/')
 
 function App() {
   return (
