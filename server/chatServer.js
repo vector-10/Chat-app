@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 // cors  options for restricted routes
 const socketIO = require('socket.io')(http, {
     cors:{
-        origin: 'http://localhost:3000'
+        origin: 'http://localhost:3000',
+        origin: '*'
     }
 })
 
